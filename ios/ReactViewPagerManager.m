@@ -28,7 +28,10 @@ RCT_EXPORT_VIEW_PROPERTY(onPageScrollStateChanged, RCTDirectEventBlock)
             RCTLogError(@"Cannot find ReactNativePageView with tag #%@", reactTag);
             return;
         }
-        [view goTo:index animated:animated];
+        
+//        view.transitionStyle = index == 0 ? UIPageViewControllerTransitionStyleScroll : UIPageViewControllerTransitionStylePageCurl;
+        [view embed:[index intValue]];
+//        [view goTo:index animated:animated];
     }];
 }
 

@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (void)goTo:(NSNumber *)index animated:(BOOL)animated;
+- (void) embed:(int) index;
 - (void)shouldScroll:(BOOL)scrollEnabled;
 - (void)shouldShowPageIndicator:(BOOL)showPageIndicator;
 - (void)shouldDismissKeyboard:(NSString *)dismissKeyboard;
